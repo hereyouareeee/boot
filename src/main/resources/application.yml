@@ -1,0 +1,15 @@
+server:
+  port: 9999
+  context-path: /boot
+  tomcat:
+    uri-encoding: UTF-8
+
+spring:
+  profiles:
+    active: dev
+  output:
+    ansi:
+      enabled: always
+
+
+

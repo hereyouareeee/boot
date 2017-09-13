@@ -1,0 +1,34 @@
+
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.1.90:3308/nonobank_app?useUnicode=true&amp;characterEncoding=UTF-8&amp;zeroDateTimeBehavior=convertToNull
+    username: yanfa
+    password: yanfa#123
+  jpa:
+    database: mysql
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+      naming:
+        strategy: org.hibernate.cfg.ImprovedNamingStrategy
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    database: 0
+#    pool:
+#      max-active: 16
+#      min-idle: 0
+#      max-idle: 16 #最大空闲连接数
+#      max-wait: -1 #最大阻塞等待值 负数表示没有限制
+#    password:
+#    timeout: 0  #连接超时时间
+
+
+session:
+  sessionId:
+    timeout: 604800 #7天
